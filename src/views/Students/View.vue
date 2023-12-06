@@ -4,7 +4,7 @@
         <div class="card-header">
           <h4>
             Students
-            <RouterLink to="/student/create" class="btn btn-primary float-end" >Add Students</RouterLink>
+            <RouterLink to="/students/create" class="btn btn-primary float-end" >Add Students</RouterLink>
           </h4>
         </div>
         <div class="car-body">
@@ -29,7 +29,7 @@
                 <td>{{ student.phone }}</td>
                 <td>{{student.created_at }}</td>
                 <td>
-                  <RouterLink to="/" class="btn btn-success ">Edit</RouterLink>
+                  <RouterLink :to="{path:'/students/'+student.id+'/edit'}" class="btn btn-success ">Edit</RouterLink>
                   <button type="button" class="btn btn-danger " >Delete</button>
                 </td>
               </tr>
